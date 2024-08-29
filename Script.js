@@ -76,7 +76,7 @@ const update = () => {
     requestAnimationFrame(update);//Syncs the browser's refresh rate with update 
 };
 
-//Allows oither poarts of the code to dynamically adjust the carousel's size and layout
+//Allows other parts of the code to dynamically adjust the carousel's size and layout
 const onResize = () => {
     const boundingCarousel = carouselContainer.getBoundingClientRect()//Returns a DOMRect object with sizing (w, h, top, right...);
 
@@ -118,7 +118,7 @@ const initEvents = () => {
         carousel.style.cursor = "grab";
     });
 
-    carousel.addEventListener("touchMove", (e) => isMouseDown && getPosX(e.touches[0].clientX));
+    carousel.addEventListener("touchMove", (e) => isMouseDown && getPosX(e.touches[0].clientX)); //Updated based on swipe movement
 
     window.addEventListener("resize", createCarousel);
 
